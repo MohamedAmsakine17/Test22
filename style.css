@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Lilita+One&display=swap");
+
+body {
+  height: 100vh;
+  background-image: url("../Imgs/Background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Caveat Brush", cursive;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+#unity-container {
+  grid-area: 1 / 1 / 5 / 2;
+}
+
+.game-buttons {
+  grid-area: 5 / 1 / 6 / 2;
+  display: flex;
+  align-items: center;
+}
+
+#unity-build-title {
+  font-family: "Caveat Brush", cursive;
+  color: white;
+  font-size: 30px;
+}
+
+#unity-fullscreen-button {
+  background: none;
+  background-color: #f9bb2a;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.meme-generator-button {
+  background-color: #f6b721;
+  color: black;
+  cursor: pointer;
+  border: 5px solid black;
+  padding: 2px 20px;
+  animation: strobe 0.1s ease-in-out infinite;
+  display: inline-block;
+  font-size: 32px;
+  margin: 0 20px;
+  font-weight: 600;
+  transform: rotate(0deg);
+  text-decoration: none;
+  font-family: "Caveat Brush", cursive;
+  height: fit-content;
+}
+
+@keyframes strobe {
+  0% {
+    scale: 1;
+    transform-origin: center center;
+  }
+  100% {
+    scale: 1.02;
+    transform-origin: center center;
+  }
+}
+
+a {
+  display: inline-block;
+  transform: scale(1);
+  transition: all 0.4s;
+}
+
+a:hover {
+  transform: scale(1.1);
+  display: inline-block;
+  color: black;
+}
